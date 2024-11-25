@@ -12,12 +12,12 @@ jobs:
       - name: Connect deploy key
         uses: cloudtype-github-actions/connect@v1
         with:
-          token: ${{ secrets.CLOUDTYPE_TOKEN }}
-          ghtoken: ${{ secrets.GHP_TOKEN }}
+          token: ${{ secrets.CLOUDTYPE_TOKEN }}   # Cloudtype API Key
+          ghtoken: ${{ secrets.GHP_TOKEN }}       # GitHub Token
       - name: Deploy
         uses: cloudtype-github-actions/deploy@v1
         with:
-          token: ${{ secrets.CLOUDTYPE_TOKEN }}
+          token: ${{ secrets.CLOUDTYPE_TOKEN }}   # Cloudtype API Key
           project: hmius.docker2/cicd
           stage: main
           yaml: |
